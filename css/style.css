@@ -1,0 +1,21 @@
+:root {
+    --yellow: #ffff00;
+    --orange: #ff5b00;
+    --red: #e60000;
+    --green: #1b5308;
+    --pink: #ff007a;
+    --black: #0a0a0a;
+    --white: #ecf0f1;
+    --font: 'Druk Wide Bold';
+    --background-color: #ff5b00;
+    --text-color: #0a0a0a;
+    --accent-color: #e67e22;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--font);
+    margin: 0;
+    padding: 0;
+}
