@@ -1,3 +1,24 @@
+@font-face {
+    font-family: 'Fold Grotesque';
+    src: url('../fonts/Fold-Grotesque-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Fold Grotesque';
+    src: url('../fonts/Fold-Grotesque-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Fold Grotesque';
+    src: url('../fonts/Fold-Grotesque-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
 :root {
     --yellow: #ffff00;
     --orange: #ff5b00;
@@ -12,10 +33,95 @@
     --accent-color: #e67e22;
 }
 
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: auto;
+}
+
 body {
     background-color: var(--background-color);
     color: var(--text-color);
     font-family: var(--font);
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
+}
+
+body > header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 16px 0;
+}
+
+main {
+    width: 100%;
+}
+
+.hero {
+    width: 100%;
+    padding: 0 16px;
+}
+
+.hero header {
+    display: flex;
+    flex-direction: column;
+    padding-top: 90px;
+    margin: 0;
+    width: 100%;
+}
+
+.hero header h1 {
+    font-family: var(--font);
+    color: var(--text-color);
+    font-size: clamp(2.9rem, 11vw, 5.8rem);
+    line-height: 0.8;
+    letter-spacing: 0;
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+    text-transform: uppercase;
+}
+
+.pangrama {
+    font-family: 'Fold Grotesque', sans-serif;
+    max-width: 100%;
+    width: 100%;
+    margin: 28px 0 0;
+    font-size: clamp(0.95rem, 4vw, 1.2rem);
+    line-height: 1.35;
+    letter-spacing: 0;
+}
+
+@media (min-width: 768px) {
+    body > header {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .hero {
+        padding: 0 24px;
+    }
+
+    .hero header {
+        padding-top: 96px;
+    }
+
+    .hero header h1 {
+        font-size: clamp(4rem, 9vw, 9rem);
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero header {
+        padding-top: 110px;
+    }
+
+    .hero header h1 {
+        font-size: clamp(5rem, 8vw, 11rem);
+        line-height: 0.82;
+    }
 }
