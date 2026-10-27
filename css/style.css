@@ -36,12 +36,17 @@
 * {
     box-sizing: border-box;
 }
-
+.dark-theme {
+    --background-color: #0a0a0a;
+    --text-color: #ecf0f1;
+    --accent-color: #e67e22;
+}
 html {
     scroll-behavior: auto;
 }
 
 body {
+    transition: var(--background-color);
     background-color: var(--background-color);
     color: var(--text-color);
     font-family: var(--font);
