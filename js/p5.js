@@ -12,9 +12,14 @@ function windowResized() {
 }
 
 function draw() {
+    let time = millis() * 0.001;
+    let size = sin(time) * 50 + 100;
+    let r = sin(time) * 127 + 128;
+    let g = cos(time + PI/3) * 127 + 128;
+    let b = sin(time + (2 * PI) / 3) * 127 + 128;
     background(0, 10);
-    fill(255);
-    stroke(255)
+    fill(0);
+    stroke(r, g, b);
     strokeWeight(10);
     x += (mouseX - x) * friction;
     y += (mouseY - y) * friction;
